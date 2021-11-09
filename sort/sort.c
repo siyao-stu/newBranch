@@ -31,24 +31,12 @@ int quick_sort(int *array, int low, int high)
             high--;
         }
         array[low] = array[high];
-        // for (int i = 0; i < 10; i++) {
-        //     printf("%d\t", array[i]);
-        // }
-        // printf("\n");
         while (low < high && array[low] <= pivot) {
             low++;
         }
         array[high] = array[low];
-        // for (int i = 0; i < 10; i++) {
-        //     printf("%d\t", array[i]);
-        // }
-        // printf("\n");
     }
     array[low] = pivot;
-    // for (int i = 0; i < 10; i++) {
-    //     printf("%d\t", array[i]);
-    // }
-    // printf("\n");
     quick_sort(array, start, low-1);
     quick_sort(array, low + 1, end);
     return 0;
@@ -67,6 +55,11 @@ int insert_sort(int *array, int size)
         array[posation] = value;
     }
     return 0;
+}
+
+int hill_sort(int *array, int size)
+{
+
 }
 
 int main()
